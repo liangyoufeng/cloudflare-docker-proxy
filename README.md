@@ -16,6 +16,9 @@ CLOUDFLARE_ACCOUNT_ID = your account id 就是cloudflare的account id
 cloudflare workers 域名设置 设置->触发器->添加自定义域 把所以域名添加到自定义域就可以了
 ${workername}.${username}.workers.dev 返回的routes json
 cf 优选ip https://github.com/XIU2/CloudflareSpeedTest
+docker 官方镜像请加library
+以前docker pull php:8.3-apache
+用加速： 加速域名/library/php:8.3-apache
 ```
 ## Config tutorial
 
@@ -33,11 +36,11 @@ cf 优选ip https://github.com/XIU2/CloudflareSpeedTest
    - add more records and modify the config as you need
    ```javascript
    const routes = {
-     "docker.libcuda.so": "https://registry-1.docker.io",
-     "quay.libcuda.so": "https://quay.io",
-     "gcr.libcuda.so": "https://k8s.gcr.io",
-     "k8s-gcr.libcuda.so": "https://k8s.gcr.io",
-     "ghcr.libcuda.so": "https://ghcr.io",
+     "docker.tycng.com": "https://registry-1.docker.io",
+     "quay.tycng.com": "https://quay.io",
+     "gcr.tycng.com": "https://k8s.gcr.io",
+     "k8s-gcr.tycng.com": "https://k8s.gcr.io",
+     "ghcr.tycng.com": "https://ghcr.io",
    };
    ```
 
