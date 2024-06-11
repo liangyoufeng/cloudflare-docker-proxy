@@ -36,16 +36,19 @@ async function handleRequest(request) {
       }
     );
   }
-  // check if need to authenticate
-  if (!/%2F/.test(url.search) && /%3A/.test(url.toString())) {
-    let modifiedUrl = url.toString().replace(/%3A(?=.*?&)/, '%3Alibrary%2F');
-    url = new URL(modifiedUrl);
-  }
+  if (upstream === "https://registry-1.docker.io") {
+    // Modify URL if necessary based on search parameters and encoded characters
+    if (!/%2F/.test(url.search) && /%3A/.test(url.toString())) {
+      let modifiedUrl = url.toString().replace(/%3A(?=.*?&)/, '%3Alibrary%2F');
+      url = new URL(modifiedUrl);
+    }
 
-  const libraryPathPattern = /^\/v2\/[^/]+\/[^/]+\/[^/]+$/;
-  const libraryPrefixPattern = /^\/v2\/library/;
-  if (libraryPathPattern.test(url.pathname) && !libraryPrefixPattern.test(url.pathname)) {
-    url.pathname = url.pathname.replace(/\/v2\//, '/v2/library/');
+    // Append 'library' to the pathname if necessary
+    const libraryPathPattern = /^\/v2\/[^/]+\/[^/]+\/[^/]+$/;
+    const libraryPrefixPattern = /^\/v2\/library/;
+    if (libraryPathPattern.test(url.pathname) && !libraryPrefixPattern.test(url.pathname)) {
+      url.pathname = url.pathname.replace(/\/v2\//, '/v2/library/');
+    }
   }
   // check if need to authenticate
   if (url.pathname == "/v2/") {
