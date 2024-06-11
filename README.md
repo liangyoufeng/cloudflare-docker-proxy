@@ -16,9 +16,6 @@ CLOUDFLARE_ACCOUNT_ID = your account id 就是cloudflare的account id
 cloudflare workers 域名设置 设置->触发器->添加自定义域 把所以域名添加到自定义域就可以了
 ${workername}.${username}.workers.dev 返回的routes json
 cf 优选ip https://github.com/XIU2/CloudflareSpeedTest
-docker 官方镜像请加library
-以前docker pull php:8.3-apache
-用加速： 加速域名/library/php:8.3-apache
 ```
 ## Config tutorial
 
