@@ -36,6 +36,11 @@ async function handleRequest(request) {
       }
     );
   }
+  const libraryPathPattern = /^\/v2\/[^/]+\/[^/]+\/[^/]+$/;
+  const libraryPrefixPattern = /^\/v2\/library/;
+  if (libraryPathPattern.test(url.pathname) && !libraryPrefixPattern.test(url.pathname)) {
+    url.pathname = url.pathname.replace(/\/v2\//, '/v2/library/');
+  }
   // check if need to authenticate
   if (url.pathname == "/v2/") {
     const newUrl = new URL(upstream + "/v2/");
