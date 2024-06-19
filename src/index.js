@@ -11,6 +11,9 @@ const routes = {
   "k8s.goitcloud.eu.org": "https://registry.k8s.io",
   "ghcr.goitcloud.eu.org": "https://ghcr.io",
   "cloudsmith.goitcloud.eu.org": "https://docker.cloudsmith.io",
+  "pypi.goitcloud.eu.org": "https://pypi.org",
+  "npmjs.goitcloud.eu.org": "https://registry.npmjs.org",
+  "cnpmjs.goitcloud.eu.org": "http://r.cnpmjs.org",
 };
 
 function routeByHosts(host) {
