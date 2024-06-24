@@ -14,6 +14,9 @@ const routes = {
   "pypi.goitcloud.eu.org": "https://pypi.org",
   "npmjs.goitcloud.eu.org": "https://registry.npmjs.org",
   "cnpmjs.goitcloud.eu.org": "http://r.cnpmjs.org",
+  "download.docker.goitcloud.eu.org": "https://download.docker.com",
+  "hub.docker.goitcloud.eu.org": "https://hub.docker.com",
+  "google.goitcloud.eu.org": "https://www.google.com",
 };
 
 function routeByHosts(host) {
