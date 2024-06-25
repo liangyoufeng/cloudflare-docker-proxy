@@ -16,8 +16,6 @@ const routes = {
   "cnpmjs.goitcloud.eu.org": "http://r.cnpmjs.org",
   "download.docker.goitcloud.eu.org": "https://download.docker.com",
   "hub.docker.goitcloud.eu.org": "https://hub.docker.com",
-  "google.goitcloud.eu.org": "https://www.google.com",
-  "github.goitcloud.eu.org": "https://github.com",
 };
 
 function routeByHosts(host) {
