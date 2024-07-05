@@ -4,18 +4,17 @@ addEventListener("fetch", (event) => {
 });
 
 const routes = {
-  "docker.goitcloud.eu.org": "https://registry-1.docker.io",
-  "quay.goitcloud.eu.org": "https://quay.io",
-  "gcr.goitcloud.eu.org": "https://gcr.io",
-  "k8s-gcr.goitcloud.eu.org": "https://k8s.gcr.io",
-  "k8s.goitcloud.eu.org": "https://registry.k8s.io",
-  "ghcr.goitcloud.eu.org": "https://ghcr.io",
-  "cloudsmith.goitcloud.eu.org": "https://docker.cloudsmith.io",
-  "pypi.goitcloud.eu.org": "https://pypi.org",
-  "npmjs.goitcloud.eu.org": "https://registry.npmjs.org",
-  "cnpmjs.goitcloud.eu.org": "http://r.cnpmjs.org",
-  "download.docker.goitcloud.eu.org": "https://download.docker.com",
-  "hub.docker.goitcloud.eu.org": "https://hub.docker.com",
+  "dc.goitcloud.eu.org": "https://registry-1.docker.io",
+  "qa.goitcloud.eu.org": "https://quay.io",
+  "gr.goitcloud.eu.org": "https://gcr.io",
+  "ks-gr.goitcloud.eu.org": "https://k8s.gcr.io",
+  "ks.goitcloud.eu.org": "https://registry.k8s.io",
+  "gc.goitcloud.eu.org": "https://ghcr.io",
+  "cs.goitcloud.eu.org": "https://docker.cloudsmith.io",
+  "pi.goitcloud.eu.org": "https://pypi.org",
+  "nj.goitcloud.eu.org": "https://registry.npmjs.org",
+  "cj.goitcloud.eu.org": "http://r.cnpmjs.org",
+  "ddc.goitcloud.eu.org": "https://download.docker.com",
 };
 
 function routeByHosts(host) {
